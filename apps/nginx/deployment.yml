@@ -18,7 +18,6 @@ metadata:
   name: nginx2
   labels:
     app: nginx2
-
 spec:
   selector:
     matchLabels:
