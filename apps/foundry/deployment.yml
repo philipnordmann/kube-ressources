@@ -50,16 +50,16 @@ spec:
           volumeMounts:
             - name: volv
               mountPath: /data
-          volumes:
-            - name: volv
-              persistentVolumeClaim:
-                claimName: foundry-vol-claim
           resources:
             limits:
               cpu: 750m
               memory: 512Mi
             requests:
               cpu: 500m
+      volumes:
+            - name: volv
+              persistentVolumeClaim:
+                claimName: foundry-vol-claim
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
