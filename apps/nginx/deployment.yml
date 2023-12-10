@@ -45,7 +45,7 @@ spec:
   tls:
     - hosts:
       - nginx2.k8s.nordmann.ninja
-      secretName: nginx-cert
+      secretName: nginx2-cert
   rules:
   - host: nginx2.k8s.nordmann.ninja
     http:
