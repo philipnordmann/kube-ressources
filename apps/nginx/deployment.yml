@@ -63,9 +63,9 @@ kind: Certificate
 metadata:
   name: nginx2-cert
 spec:
-  commonName: nginx.k8s.nordmann.ninja
+  commonName: nginx2.k8s.nordmann.ninja
   dnsNames:
-    - nginx.k8s.nordmann.ninja
+    - nginx2.k8s.nordmann.ninja
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer
