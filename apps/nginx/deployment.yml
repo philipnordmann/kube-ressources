@@ -81,14 +81,7 @@ spec:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 50
-  - type: Pods
-    pods:
-      metric:
-        name: packets-per-second
-      target:
-        type: AverageValue
-        averageValue: 1k
+        averageUtilization: 20
 ---
 apiVersion: cert-manager.io/v1
 kind: Certificate
