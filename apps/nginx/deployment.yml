@@ -20,7 +20,6 @@ metadata:
     app: nginx2
 
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: nginx2
