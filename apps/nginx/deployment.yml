@@ -82,6 +82,17 @@ spec:
       target:
         type: Utilization
         averageUtilization: 50
+  - type: Object
+    object:
+      metric:
+        name: requests-per-second
+      describedObject:
+        apiVersion: networking.k8s.io/v1
+        kind: Ingress
+        name: nginx2-ingress
+      target:
+        type: Value
+        value: 10k
 ---
 apiVersion: cert-manager.io/v1
 kind: Certificate
