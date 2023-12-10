@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: foundry
-          image: nginx
+          image: felddy/foundryvtt:release
           envFrom:
           - secretRef:
               name: foundry-config
