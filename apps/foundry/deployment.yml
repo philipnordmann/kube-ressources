@@ -11,6 +11,18 @@ spec:
   selector:
     app: foundry
 ---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: foundry-vol-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: longhorn
+  resources:
+    requests:
+      storage: 10Gi
+---
 kind: Deployment
 apiVersion: apps/v1
 metadata:
@@ -35,6 +47,13 @@ spec:
           ports:
             - name: web
               containerPort: 30000
+          volumeMounts:
+            - name: volv
+              mountPath: /data
+          volumes:
+            - name: volv
+              persistentVolumeClaim:
+                claimName: foundry-vol-claim
           resources:
             limits:
               cpu: 750m
